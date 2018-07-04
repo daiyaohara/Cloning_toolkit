@@ -10,7 +10,7 @@ from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 
 #計算補助用関数
-def Ligation(vector_final_pmol,insert_final_pmol,
+def Ligation(vector_final_pmol,insert_final_pmol,final_total_volume,
              vector_length,insert_length,
              vector_amount,insert_amount):
 
@@ -18,7 +18,13 @@ def Ligation(vector_final_pmol,insert_final_pmol,
     insert_ng = insert_final_pmol * 660.0 * insert_length / 1000.0
     vector_ul = vector_ng / vector_amount
     insert_ul = insert_ng / insert_amount
-    result = [vector_ul,insert_ul]
+    print(vector_ul)
+    print(insert_ul)
+    rate_vector = vector_ul/(vector_ul+insert_ul)
+    rate_insert = insert_ul/(vector_ul+insert_ul) 
+    result_vector = final_total_volume*rate_vector
+    result_insert = final_total_volume*rate_insert
+    result = [result_vector,result_insert]
     return result
 
 def gotaq(final_volume, master_X):
@@ -133,6 +139,7 @@ class Subwindow(QWidget):
         self.inputLine4 = QLineEdit()
         self.inputLine5 = QLineEdit()
         self.inputLine6 = QLineEdit()
+        self.inputLine7 = QLineEdit()
         self.outputLine1 = QLineEdit()
         self.outputLine2 = QLineEdit()
         self.outputLine1.setReadOnly(True)
@@ -142,23 +149,27 @@ class Subwindow(QWidget):
         self.calcButton.clicked.connect(self.calc)
 
         lineLayout = QGridLayout()
-        lineLayout.addWidget(QLabel("Final Vector pmol: "), 0, 0)
+        lineLayout.addWidget(QLabel("Final total volme: "), 0, 0)
         lineLayout.addWidget(self.inputLine, 0, 1)
-        lineLayout.addWidget(QLabel("Final Insert pmol: "), 1, 0)
+        lineLayout.addWidget(QLabel("Final Vector pmol rate: "), 1, 0)
         lineLayout.addWidget(self.inputLine2, 1, 1)
-        lineLayout.addWidget(QLabel("Vector DNA amount (ng/ul): "), 2, 0)
+        lineLayout.addWidget(QLabel("Final Insert pmol rate: "), 2, 0)
         lineLayout.addWidget(self.inputLine3, 2, 1)
-        lineLayout.addWidget(QLabel("Insert DNA amount (ng/ul): "), 3, 0)
+        lineLayout.addWidget(QLabel("Vector DNA amount (ng/ul): "), 3, 0)
         lineLayout.addWidget(self.inputLine4, 3, 1)
-        lineLayout.addWidget(QLabel("Vector length (bp): "), 4, 0)
+        lineLayout.addWidget(QLabel("Insert DNA amount (ng/ul): "), 4, 0)
         lineLayout.addWidget(self.inputLine5, 4, 1)
-        lineLayout.addWidget(QLabel("Insert length (bp): "), 5, 0)
+        lineLayout.addWidget(QLabel("Vector length (bp): "), 5, 0)
         lineLayout.addWidget(self.inputLine6, 5, 1)
-        lineLayout.addWidget(QLabel("############# Result ############"),6,0)
-        lineLayout.addWidget(QLabel("Vector ul"),7,0)
-        lineLayout.addWidget(self.outputLine1, 7, 1)
-        lineLayout.addWidget(QLabel("Insert ul"),8,0)
-        lineLayout.addWidget(self.outputLine2,8,1)
+        lineLayout.addWidget(QLabel("Insert length (bp): "), 6, 0)
+        lineLayout.addWidget(self.inputLine7, 6, 1)
+
+        lineLayout.addWidget(QLabel("############# Result ############"),7,0)
+
+        lineLayout.addWidget(QLabel("Vector ul"),8,0)
+        lineLayout.addWidget(self.outputLine1, 8, 1)
+        lineLayout.addWidget(QLabel("Insert ul"),9,0)
+        lineLayout.addWidget(self.outputLine2,9,1)
 
 
         buttonLayout = QVBoxLayout()
@@ -172,14 +183,15 @@ class Subwindow(QWidget):
         self.setWindowTitle("Calculate about Ligation")
 
     def calc(self):
-        vector_final_pmol = float(self.inputLine.text())
-        insert_final_pmol = float(self.inputLine2.text())
-        vector_amount = float(self.inputLine3.text())
-        insert_amount = float(self.inputLine4.text())
-        vector_length = float(self.inputLine5.text())
-        insert_length = float(self.inputLine6.text())
+        final_total_volume = float(self.inputLine.text())
+        vector_final_pmol = float(self.inputLine2.text())
+        insert_final_pmol = float(self.inputLine3.text())
+        vector_amount = float(self.inputLine4.text())
+        insert_amount = float(self.inputLine5.text())
+        vector_length = float(self.inputLine6.text())
+        insert_length = float(self.inputLine7.text())
 
-        r = Ligation(vector_final_pmol,insert_final_pmol,
+        r = Ligation(vector_final_pmol,insert_final_pmol,final_total_volume,
              vector_length,insert_length,
              vector_amount,insert_amount)
         r1 = r[0]
