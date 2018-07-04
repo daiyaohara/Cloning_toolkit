@@ -26,3 +26,6 @@
 7. コマンドプロンプトにて以下で起動。  
    python CloningPy_developing.py  
    
+
+## Result : 
+![citrate cycle tca cycle mmu00020](https://user-images.githubusercontent.com/28255294/39768813-52439c84-5325-11e8-87f8-04858058a47d.png)
