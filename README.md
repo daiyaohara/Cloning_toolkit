@@ -28,4 +28,4 @@
    
 
 ## Result : 
-![citrate cycle tca cycle mmu00020](https://user-images.githubusercontent.com/28255294/39768813-52439c84-5325-11e8-87f8-04858058a47d.png)
+![citrate cycle tca cycle mmu00020](https://user-images.githubusercontent.com/28255294/42268856-8c6f4796-7fb7-11e8-8cf8-2db9aede4af1.PNG)
