@@ -9,7 +9,7 @@
 
 ## Usage (Windows10) :
 1. まずpython3.6.6をダウンロード。https://www.python.org/downloads/release/python-366/  
-　 画面下のほうにあるWindows x86-64 executable installerをダウンロード  
+   画面下のほうにあるWindows x86-64 executable installerをダウンロード  
 2. python3.6.6をインストールする。ダウンロードしたファイルをクリックしてインストールを進める。  
    途中PythonをPathに追加しますか？というチェックボックスがあるので、そこをチェックしてインストールを進める。  
 3. python3.6.6がインストールされたかを確認する。コマンドプロンプトにて  
