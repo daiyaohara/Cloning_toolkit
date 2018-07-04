@@ -3,8 +3,28 @@
 ## Requirements:
 - python3.6 
     - PyQt5 
-## Usage (mac and linux) :
-1. $ sudo pip3 install PyQt5
+## Usage (Mac) :
+1. Miniconda3をインストールする。https://conda.io/miniconda.html  
+   このサイト内のMac OS X, Python3.6, 64-bitの物をダウンロード
+2. Miniconda3のインストールを行う。ターミナルを開き以下を入力する。（"$"は入力する必要なし）  
+   $ cd Downloads  
+   $ sudo ./Miniconda3-latest-MacOSX-x86_64.sh 
+   パスワード（ログインするときと同じものを入力。文字を打っても何も出ないが、実際は入力されている。エンターキーを押して入力)
+   エンターキーを長押し
+   指示に従ってインストールを行う。途中Miniconda3をPathに追加するかどうかと聞かれるところをyesにする。
+3. ターミナルを再起動して、
+   $ which python 
+   /Users/owner/miniconda3/bin/python3　のように返されることを確認
+4. $ sudo pip install pyqt5
+5. Cloning_toolkitをGithibからダウンロード。"cd ダウンロードした場所"でCloning_toolkitをダウンロードした場所へ移動。以下例  
+   $ cd Downloads/Cloning_toolkit-master/CloningPy/
+6. $ python CloningPy_developing.py  
+   これで立ち上がるかどうか確認。
+7. $ cd 
+8. $ 
+   
+   
+   
 2. $ /usr/bin/python3 Cloning_developing.py
 
 ## Usage (Windows10) :
