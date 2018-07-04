@@ -13,8 +13,8 @@
    パスワード（ログインするときと同じものを入力。文字を打っても何も出ないが、実際は入力されている。エンターキーを押して入力)
    エンターキーを長押し
    指示に従ってインストールを行う。途中Miniconda3をPathに追加するかどうかと聞かれるところをyesにする。
-3. ターミナルを再起動して、
-   $ which python 
+3. ターミナルを再起動して、  
+   $ which python  
    /Users/owner/miniconda3/bin/python3　のように返されることを確認
 4. $ sudo pip install pyqt5
 5. Cloning_toolkitをGithibからダウンロード。"cd ダウンロードした場所"でCloning_toolkitをダウンロードした場所へ移動。以下例  
