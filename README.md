@@ -3,6 +3,7 @@
 ## Requirements:
 - python3.6 
     - PyQt5 
+    
 ## Usage (Mac) :
 1. Miniconda3をインストールする。https://conda.io/miniconda.html  
    このサイト内のMac OS X, Python3.6, 64-bitの物をダウンロード
@@ -19,13 +20,8 @@
 5. Cloning_toolkitをGithibからダウンロード。"cd ダウンロードした場所"でCloning_toolkitをダウンロードした場所へ移動。以下例  
    $ cd Downloads/Cloning_toolkit-master/CloningPy/
 6. $ python CloningPy_developing.py  
-   これで立ち上がるかどうか確認。
-7. $ cd 
-8. $ 
+   これで立ち上がるかどうか確認
    
-   
-   
-2. $ /usr/bin/python3 Cloning_developing.py
 
 ## Usage (Windows10) :
 1. まずpython3.6.6をダウンロード。https://www.python.org/downloads/release/python-366/  
