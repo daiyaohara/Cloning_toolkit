@@ -28,7 +28,7 @@
    
 
 ## Result : 
-3000bp,100ng/ulのVector及び800bp,30ng/ulのInsert（ゲル抽出産物)をライゲーションするとする。
-最終的なDNA混合物のvolumeを7.5ulとしたとき、Vector:Insertのモル比が1:8になるようにするには何ul入れればよいかを計算。  
+3000bp,100ng/ulのVector及び800bp,30ng/ulのInsert（ゲル抽出産物)をライゲーションするとする。  
+最終的なDNA混合物のvolumeを7.5ulとしたとき、Vector:Insertのモル比が1:8になるようにするにはそれぞれを何ul入れればよいかを計算。  
   
 ![CloningPy Ligation example](https://user-images.githubusercontent.com/28255294/42268856-8c6f4796-7fb7-11e8-8cf8-2db9aede4af1.PNG)
